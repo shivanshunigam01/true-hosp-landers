@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import trueLogo from "@/assets/true-logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,14 +21,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-12 h-12 bg-gradient-hero rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">T</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-lg text-foreground leading-tight">T.R.U.E.</span>
-              <span className="text-xs text-muted-foreground leading-tight">Hospitals</span>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img src={trueLogo} alt="T.R.U.E. Hospitals" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

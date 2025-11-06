@@ -8,7 +8,7 @@ import TestimonialCard from "@/components/hospital/TestimonialCard";
 import WhatsAppButton from "@/components/hospital/WhatsAppButton";
 import { Award, Baby, Clock, Heart, Shield, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import gynecologistHero from "@/assets/gynecologist-hero.jpg";
+import gynecologistDoctors from "@/assets/gynecologist-doctors.jpg";
 
 const Gynecologist = () => {
   const concernOptions = [
@@ -28,28 +28,18 @@ const Gynecologist = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-hero text-primary-foreground overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={gynecologistHero}
-            alt="Women's Healthcare"
-            className="w-full h-full object-cover opacity-20"
-          />
-        </div>
-        <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="relative bg-secondary overflow-hidden">
+        <div className="container mx-auto px-4 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="animate-fade-in">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                Comprehensive Women's Health & Maternity Care
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-primary">
+                Expert Care, Every Step of the Way
               </h1>
-              <p className="text-lg md:text-xl mb-8 opacity-90">
-                From regular check-ups to advanced maternity support, our expert gynecologists ensure compassionate,
-                personalized care.
+              <p className="text-lg md:text-xl mb-8 text-primary/80">
+                Explore our array of services designed to meet your unique health needs
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" variant="secondary" asChild>
-                  <a href="tel:+919205007277">Call +91-9205007277</a>
-                </Button>
+              <div className="relative rounded-2xl overflow-hidden">
+                <img src={gynecologistDoctors} alt="Expert Gynecologists" className="w-full h-auto" />
               </div>
             </div>
             <div className="animate-slide-up">
