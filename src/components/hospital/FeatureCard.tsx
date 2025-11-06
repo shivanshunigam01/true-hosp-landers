@@ -8,12 +8,12 @@ interface FeatureCardProps {
 
 const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps) => {
   return (
-    <div className="bg-card p-6 rounded-xl shadow-card hover:shadow-hover transition-shadow duration-300 animate-fade-in">
-      <div className="w-14 h-14 bg-primary-light rounded-lg flex items-center justify-center mb-4">
-        <Icon className="w-7 h-7 text-primary" />
+    <div className="group bg-card p-8 rounded-2xl shadow-card hover:shadow-hover transition-all duration-300 hover:-translate-y-1 border border-border/50">
+      <div className="w-16 h-16 bg-primary-light rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+        <Icon className="w-8 h-8 text-primary" />
       </div>
-      <h3 className="font-semibold text-lg text-foreground mb-2">{title}</h3>
-      {description && <p className="text-sm text-muted-foreground">{description}</p>}
+      <h3 className="font-semibold text-xl text-foreground mb-2">{title}</h3>
+      {description && <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>}
     </div>
   );
 };

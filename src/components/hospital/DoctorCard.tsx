@@ -14,19 +14,17 @@ const DoctorCard = ({ name, specialization, experience }: DoctorCardProps) => {
   };
 
   return (
-    <div className="bg-card p-6 rounded-xl shadow-card hover:shadow-hover transition-all duration-300 animate-fade-in">
-      <div className="flex items-start space-x-4">
-        <div className="w-20 h-20 bg-primary-light rounded-full flex items-center justify-center flex-shrink-0">
-          <User className="w-10 h-10 text-primary" />
+    <div className="bg-card p-8 rounded-2xl shadow-card hover:shadow-hover transition-all duration-300 hover:-translate-y-1 border border-border/50">
+      <div className="flex flex-col items-center text-center">
+        <div className="w-24 h-24 bg-gradient-to-br from-primary-light to-accent rounded-full flex items-center justify-center mb-5 shadow-md">
+          <User className="w-12 h-12 text-primary" />
         </div>
-        <div className="flex-1">
-          <h3 className="font-semibold text-lg text-foreground mb-1">{name}</h3>
-          <p className="text-sm text-muted-foreground mb-1">{specialization}</p>
-          {experience && <p className="text-xs text-muted-foreground mb-3">{experience}</p>}
-          <Button onClick={handleBooking} size="sm" className="mt-2">
-            Book Appointment
-          </Button>
-        </div>
+        <h3 className="font-bold text-xl text-foreground mb-2">{name}</h3>
+        <p className="text-sm text-muted-foreground mb-2 font-medium">{specialization}</p>
+        {experience && <p className="text-xs text-muted-foreground mb-5 bg-secondary px-3 py-1 rounded-full">{experience}</p>}
+        <Button onClick={handleBooking} className="w-full">
+          Book Appointment
+        </Button>
       </div>
     </div>
   );

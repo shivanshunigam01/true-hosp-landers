@@ -69,7 +69,7 @@ const GeneralSurgeon = () => {
               state-of-the-art facilities
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCard icon={Users} title="Top General Surgeons" />
             <FeatureCard
               icon={Stethoscope}
@@ -94,7 +94,7 @@ const GeneralSurgeon = () => {
               Expert care across a wide range of surgical procedures
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard
               icon={Stethoscope}
               title="Hernia Repair"
@@ -138,7 +138,7 @@ const GeneralSurgeon = () => {
               Highly qualified and experienced general surgeons committed to your well-being
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <DoctorCard
               name="Dr. Rajesh Kumar"
               specialization="General & Laparoscopic Surgery"
@@ -169,7 +169,7 @@ const GeneralSurgeon = () => {
               Hear from our satisfied patients about their recovery journey
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <TestimonialCard
               name="Ramesh Gupta"
               procedure="Hernia Surgery"
@@ -233,11 +233,11 @@ const GeneralSurgeon = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex flex-wrap gap-4 mt-8">
-                <Button asChild>
+              <div className="flex flex-col sm:flex-row gap-4 mt-10">
+                <Button asChild className="flex-1">
                   <a href="tel:+919205007277">Call Now</a>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" asChild className="flex-1">
                   <a
                     href="https://www.google.com/maps/search/?api=1&query=T.R.U.E.+Hospitals+Sector+52+Gurugram"
                     target="_blank"
@@ -248,7 +248,7 @@ const GeneralSurgeon = () => {
                 </Button>
               </div>
             </div>
-            <div className="bg-muted rounded-xl overflow-hidden h-96">
+            <div className="bg-muted rounded-2xl overflow-hidden h-[500px] shadow-card border border-border/50">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.2!2d77.0855!3d28.4595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI3JzM0LjIiTiA3N8KwMDUnMDcuOCJF!5e0!3m2!1sen!2sin!4v1234567890"
                 width="100%"
