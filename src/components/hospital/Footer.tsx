@@ -10,15 +10,22 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">T</span>
+                <span className="text-primary-foreground font-bold text-lg">
+                  T
+                </span>
               </div>
               <div className="flex flex-col">
-                <span className="font-bold text-lg leading-tight">T.R.U.E. Hospitals</span>
-                <span className="text-xs opacity-80 leading-tight">Your Health Partner</span>
+                <span className="font-bold text-lg leading-tight">
+                  T.R.U.E. Hospitals
+                </span>
+                <span className="text-xs opacity-80 leading-tight">
+                  Your Health Partner
+                </span>
               </div>
             </div>
             <p className="text-sm opacity-80">
-              Leading multispecialty hospital providing expert medical care with advanced technology and compassionate service.
+              Leading multispecialty hospital providing expert medical care with
+              advanced technology and compassionate service.
             </p>
           </div>
 
@@ -32,12 +39,18 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/general-surgeon" className="hover:opacity-100 transition-opacity">
+                <Link
+                  to="/general-surgeon"
+                  className="hover:opacity-100 transition-opacity"
+                >
                   General Surgeon
                 </Link>
               </li>
               <li>
-                <Link to="/gynecologist" className="hover:opacity-100 transition-opacity">
+                <Link
+                  to="/gynecologist"
+                  className="hover:opacity-100 transition-opacity"
+                >
                   Gynecologist
                 </Link>
               </li>
@@ -50,17 +63,26 @@ const Footer = () => {
             <ul className="space-y-3 text-sm opacity-80">
               <li className="flex items-start space-x-2">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>T.R.U.E. Hospitals, Sector 52, Gurugram, Haryana 122003</span>
+                <span>
+                  372, near Artemis Hospital Road, Wazirabad, Sector 52,
+                  Gurugram, Bindapur, Haryana 122003
+                </span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="w-5 h-5 flex-shrink-0" />
-                <a href="tel:+919205007277" className="hover:opacity-100 transition-opacity">
+                <a
+                  href="tel:+919205007277"
+                  className="hover:opacity-100 transition-opacity"
+                >
                   +91-9205007277
                 </a>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="w-5 h-5 flex-shrink-0" />
-                <a href="mailto:info@truehospitals.com" className="hover:opacity-100 transition-opacity">
+                <a
+                  href="mailto:info@truehospitals.com"
+                  className="hover:opacity-100 transition-opacity"
+                >
                   info@truehospitals.com
                 </a>
               </li>
@@ -69,7 +91,10 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary/20 mt-8 pt-8 text-center text-sm opacity-80">
-          <p>&copy; {new Date().getFullYear()} T.R.U.E. Hospitals. All rights reserved. | NABH Certified Healthcare</p>
+          <p>
+            &copy; {new Date().getFullYear()} T.R.U.E. Hospitals. All rights
+            reserved. | NABH Certified Healthcare
+          </p>
         </div>
       </div>
     </footer>

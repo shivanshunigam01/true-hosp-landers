@@ -36,14 +36,22 @@ const Gynecologist = () => {
                 Expert Care, Every Step of the Way
               </h1>
               <p className="text-lg md:text-xl mb-8 text-primary/80">
-                Explore our array of services designed to meet your unique health needs
+                Explore our array of services designed to meet your unique
+                health needs
               </p>
               <div className="relative rounded-2xl overflow-hidden">
-                <img src={gynecologistDoctors} alt="Expert Gynecologists" className="w-full h-auto" />
+                <img
+                  src={gynecologistDoctors}
+                  alt="Expert Gynecologists"
+                  className="w-full h-auto"
+                />
               </div>
             </div>
             <div className="animate-slide-up">
-              <AppointmentForm options={concernOptions} selectLabel="Select Your Concern" />
+              <AppointmentForm
+                options={concernOptions}
+                selectLabel="Select Your Concern"
+              />
             </div>
           </div>
         </div>
@@ -53,15 +61,21 @@ const Gynecologist = () => {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Choose Us for Women's Care?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Why Choose Us for Women's Care?
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Dedicated to providing comprehensive and compassionate care for women at every stage of life
+              Dedicated to providing comprehensive and compassionate care for
+              women at every stage of life
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <FeatureCard icon={Users} title="Experienced Gynecologists" />
             <FeatureCard icon={Baby} title="Modern Labor & Delivery Suites" />
-            <FeatureCard icon={Heart} title="Comprehensive Maternity Programs" />
+            <FeatureCard
+              icon={Heart}
+              title="Comprehensive Maternity Programs"
+            />
             <FeatureCard icon={Shield} title="Ultrasound & Fertility Support" />
             <FeatureCard icon={Clock} title="24×7 Emergency Care" />
             <FeatureCard icon={Award} title="Personalized Women's Care" />
@@ -73,9 +87,12 @@ const Gynecologist = () => {
       <section className="py-16 md:py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Gynecology Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Gynecology Services
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Complete range of women's health and maternity services under one roof
+              Complete range of women's health and maternity services under one
+              roof
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -117,9 +134,12 @@ const Gynecologist = () => {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Meet Our Gynecologists</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Meet Our Gynecologists
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Expert women's health specialists dedicated to your care and comfort
+              Expert women's health specialists dedicated to your care and
+              comfort
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -146,9 +166,12 @@ const Gynecologist = () => {
       <section className="py-16 md:py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Patient Testimonials</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Patient Testimonials
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Real stories from mothers and women we've had the privilege to care for
+              Real stories from mothers and women we've had the privilege to
+              care for
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -175,28 +198,42 @@ const Gynecologist = () => {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Visit Us Today</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Visit Us Today
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Conveniently located in Sector 52, Gurugram with easy access and parking
+              Conveniently located in Sector 52, Gurugram with easy access and
+              parking
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-card p-8 rounded-xl shadow-card">
-              <h3 className="text-2xl font-semibold text-foreground mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-semibold text-foreground mb-6">
+                Contact Information
+              </h3>
               <div className="space-y-4">
                 <div>
                   <p className="font-medium text-foreground mb-2">Address</p>
-                  <p className="text-muted-foreground">T.R.U.E. Hospitals, Sector 52, Gurugram, Haryana 122003</p>
+                  <p className="text-muted-foreground">
+                    372, near Artemis Hospital Road, Wazirabad, Sector 52,
+                    Gurugram, Bindapur, Haryana 122003
+                  </p>
                 </div>
                 <div>
                   <p className="font-medium text-foreground mb-2">Phone</p>
-                  <a href="tel:+919205007277" className="text-primary hover:underline">
+                  <a
+                    href="tel:+919205007277"
+                    className="text-primary hover:underline"
+                  >
                     +91-9205007277
                   </a>
                 </div>
                 <div>
                   <p className="font-medium text-foreground mb-2">Email</p>
-                  <a href="mailto:info@truehospitals.com" className="text-primary hover:underline">
+                  <a
+                    href="mailto:info@truehospitals.com"
+                    className="text-primary hover:underline"
+                  >
                     info@truehospitals.com
                   </a>
                 </div>

@@ -11,9 +11,9 @@ const Navbar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   const navLinks = [
-    { path: "/", label: "Home" },
-    { path: "/general-surgeon", label: "General Surgeon" },
-    { path: "/gynecologist", label: "Gynecologist" },
+    // { path: "/", label: "Home" },
+    // { path: "/general-surgeon", label: "General Surgeon" },
+    // { path: "/gynecologist", label: "Gynecologist" },
   ];
 
   return (
@@ -22,7 +22,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={trueLogo} alt="T.R.U.E. Hospitals" className="h-12 w-auto" />
+            <img
+              src={trueLogo}
+              alt="T.R.U.E. Hospitals"
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -40,12 +44,12 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <Button variant="default" size="sm" className="ml-4" asChild>
+            {/* <Button variant="default" size="sm" className="ml-4" asChild>
               <a href="tel:+919205007277">
                 <Phone className="w-4 h-4 mr-2" />
                 Call Now
               </a>
-            </Button>
+            </Button> */}
           </div>
 
           {/* Mobile Menu Button */}

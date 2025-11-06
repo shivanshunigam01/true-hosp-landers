@@ -36,14 +36,22 @@ const GeneralSurgeon = () => {
                 Expert Care, Every Step of the Way
               </h1>
               <p className="text-lg md:text-xl mb-8 text-primary/80">
-                Explore our array of services designed to meet your unique health needs
+                Explore our array of services designed to meet your unique
+                health needs
               </p>
               <div className="relative rounded-2xl overflow-hidden">
-                <img src={doctorsHero} alt="Expert Doctors" className="w-full h-auto" />
+                <img
+                  src={doctorsHero}
+                  alt="Expert Doctors"
+                  className="w-full h-auto"
+                />
               </div>
             </div>
             <div className="animate-slide-up">
-              <AppointmentForm options={surgeryOptions} selectLabel="Select Surgery Type" />
+              <AppointmentForm
+                options={surgeryOptions}
+                selectLabel="Select Surgery Type"
+              />
             </div>
           </div>
         </div>
@@ -53,14 +61,20 @@ const GeneralSurgeon = () => {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Choose T.R.U.E. Hospitals?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Why Choose T.R.U.E. Hospitals?
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Experience world-class surgical care with our expert team and state-of-the-art facilities
+              Experience world-class surgical care with our expert team and
+              state-of-the-art facilities
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <FeatureCard icon={Users} title="Top General Surgeons" />
-            <FeatureCard icon={Stethoscope} title="Advanced Laparoscopic Setup" />
+            <FeatureCard
+              icon={Stethoscope}
+              title="Advanced Laparoscopic Setup"
+            />
             <FeatureCard icon={Clock} title="24×7 ICU & Post-Op Care" />
             <FeatureCard icon={Heart} title="Quick Recovery, Minimal Scars" />
             <FeatureCard icon={Shield} title="Affordable Packages" />
@@ -73,7 +87,9 @@ const GeneralSurgeon = () => {
       <section className="py-16 md:py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Common Surgeries We Perform</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Common Surgeries We Perform
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Expert care across a wide range of surgical procedures
             </p>
@@ -114,7 +130,7 @@ const GeneralSurgeon = () => {
       </section>
 
       {/* Surgeons Section */}
-      <section className="py-16 md:py-24">
+      {/* <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Meet Our Expert Surgeons</h2>
@@ -140,13 +156,15 @@ const GeneralSurgeon = () => {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-secondary">
+      <section className="py-30 md:py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Patient Success Stories</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Patient Success Stories
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Hear from our satisfied patients about their recovery journey
             </p>
@@ -175,28 +193,42 @@ const GeneralSurgeon = () => {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Visit Us Today</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Visit Us Today
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Conveniently located in Sector 52, Gurugram with easy access and parking
+              Conveniently located in Sector 52, Gurugram with easy access and
+              parking
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-card p-8 rounded-xl shadow-card">
-              <h3 className="text-2xl font-semibold text-foreground mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-semibold text-foreground mb-6">
+                Contact Information
+              </h3>
               <div className="space-y-4">
                 <div>
                   <p className="font-medium text-foreground mb-2">Address</p>
-                  <p className="text-muted-foreground">T.R.U.E. Hospitals, Sector 52, Gurugram, Haryana 122003</p>
+                  <p className="text-muted-foreground">
+                    372, near Artemis Hospital Road, Wazirabad, Sector 52,
+                    Gurugram, Bindapur, Haryana 122003
+                  </p>
                 </div>
                 <div>
                   <p className="font-medium text-foreground mb-2">Phone</p>
-                  <a href="tel:+919205007277" className="text-primary hover:underline">
+                  <a
+                    href="tel:+919205007277"
+                    className="text-primary hover:underline"
+                  >
                     +91-9205007277
                   </a>
                 </div>
                 <div>
                   <p className="font-medium text-foreground mb-2">Email</p>
-                  <a href="mailto:info@truehospitals.com" className="text-primary hover:underline">
+                  <a
+                    href="mailto:info@truehospitals.com"
+                    className="text-primary hover:underline"
+                  >
                     info@truehospitals.com
                   </a>
                 </div>
