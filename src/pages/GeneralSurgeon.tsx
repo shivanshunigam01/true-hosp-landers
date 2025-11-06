@@ -28,17 +28,19 @@ const GeneralSurgeon = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="relative bg-secondary overflow-hidden">
-        <div className="container mx-auto px-4 py-16 md:py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div className="animate-fade-in">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-primary">
-                Expert Care, Every Step of the Way
-              </h1>
-              <p className="text-lg md:text-xl mb-8 text-primary/80">
-                Explore our array of services designed to meet your unique health needs
-              </p>
-              <div className="relative rounded-2xl overflow-hidden">
+      <section className="relative bg-gradient-to-br from-secondary via-secondary to-accent overflow-hidden">
+        <div className="container mx-auto px-4 py-20 md:py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
+            <div className="animate-fade-in space-y-8">
+              <div>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-primary">
+                  Expert Care, Every Step of the Way
+                </h1>
+                <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">
+                  Explore our array of services designed to meet your unique health needs
+                </p>
+              </div>
+              <div className="relative rounded-3xl overflow-hidden shadow-hover border-4 border-white">
                 <img src={doctorsHero} alt="Expert Doctors" className="w-full h-auto" />
               </div>
             </div>
@@ -50,15 +52,15 @@ const GeneralSurgeon = () => {
       </section>
 
       {/* Why Choose Section */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Choose T.R.U.E. Hospitals?</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+      <section className="py-20 md:py-28 bg-background">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Why Choose T.R.U.E. Hospitals?</h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
               Experience world-class surgical care with our expert team and state-of-the-art facilities
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCard icon={Users} title="Top General Surgeons" />
             <FeatureCard icon={Stethoscope} title="Advanced Laparoscopic Setup" />
             <FeatureCard icon={Clock} title="24×7 ICU & Post-Op Care" />
@@ -70,15 +72,15 @@ const GeneralSurgeon = () => {
       </section>
 
       {/* Common Surgeries Section */}
-      <section className="py-16 md:py-24 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Common Surgeries We Perform</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+      <section className="py-20 md:py-28 bg-secondary">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Common Surgeries We Perform</h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
               Expert care across a wide range of surgical procedures
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard
               icon={Stethoscope}
               title="Hernia Repair"
@@ -114,15 +116,15 @@ const GeneralSurgeon = () => {
       </section>
 
       {/* Surgeons Section */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Meet Our Expert Surgeons</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+      <section className="py-20 md:py-28 bg-background">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Meet Our Expert Surgeons</h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
               Highly qualified and experienced general surgeons committed to your well-being
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <DoctorCard
               name="Dr. Rajesh Kumar"
               specialization="General & Laparoscopic Surgery"
@@ -143,15 +145,15 @@ const GeneralSurgeon = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Patient Success Stories</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+      <section className="py-20 md:py-28 bg-gradient-to-br from-secondary to-accent">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Patient Success Stories</h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
               Hear from our satisfied patients about their recovery journey
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <TestimonialCard
               name="Ramesh Gupta"
               procedure="Hernia Surgery"
@@ -172,40 +174,40 @@ const GeneralSurgeon = () => {
       </section>
 
       {/* Contact & Location Section */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Visit Us Today</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+      <section className="py-20 md:py-28 bg-background">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Visit Us Today</h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
               Conveniently located in Sector 52, Gurugram with easy access and parking
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-card p-8 rounded-xl shadow-card">
-              <h3 className="text-2xl font-semibold text-foreground mb-6">Contact Information</h3>
-              <div className="space-y-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
+            <div className="bg-card p-10 rounded-2xl shadow-card border border-border/50">
+              <h3 className="text-3xl font-bold text-foreground mb-8">Contact Information</h3>
+              <div className="space-y-6">
                 <div>
-                  <p className="font-medium text-foreground mb-2">Address</p>
-                  <p className="text-muted-foreground">T.R.U.E. Hospitals, Sector 52, Gurugram, Haryana 122003</p>
+                  <p className="font-semibold text-lg text-foreground mb-2">Address</p>
+                  <p className="text-muted-foreground leading-relaxed">T.R.U.E. Hospitals, Sector 52, Gurugram, Haryana 122003</p>
                 </div>
                 <div>
-                  <p className="font-medium text-foreground mb-2">Phone</p>
-                  <a href="tel:+919205007277" className="text-primary hover:underline">
+                  <p className="font-semibold text-lg text-foreground mb-2">Phone</p>
+                  <a href="tel:+919205007277" className="text-primary hover:underline text-lg font-medium">
                     +91-9205007277
                   </a>
                 </div>
                 <div>
-                  <p className="font-medium text-foreground mb-2">Email</p>
-                  <a href="mailto:info@truehospitals.com" className="text-primary hover:underline">
+                  <p className="font-semibold text-lg text-foreground mb-2">Email</p>
+                  <a href="mailto:info@truehospitals.com" className="text-primary hover:underline text-lg font-medium">
                     info@truehospitals.com
                   </a>
                 </div>
               </div>
-              <div className="flex flex-wrap gap-4 mt-8">
-                <Button asChild>
+              <div className="flex flex-col sm:flex-row gap-4 mt-10">
+                <Button asChild className="flex-1">
                   <a href="tel:+919205007277">Call Now</a>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" asChild className="flex-1">
                   <a
                     href="https://www.google.com/maps/search/?api=1&query=T.R.U.E.+Hospitals+Sector+52+Gurugram"
                     target="_blank"
@@ -216,7 +218,7 @@ const GeneralSurgeon = () => {
                 </Button>
               </div>
             </div>
-            <div className="bg-muted rounded-xl overflow-hidden h-96">
+            <div className="bg-muted rounded-2xl overflow-hidden h-[500px] shadow-card border border-border/50">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.2!2d77.0855!3d28.4595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI3JzM0LjIiTiA3N8KwMDUnMDcuOCJF!5e0!3m2!1sen!2sin!4v1234567890"
                 width="100%"

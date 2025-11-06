@@ -8,12 +8,14 @@ interface TestimonialCardProps {
 
 const TestimonialCard = ({ name, procedure, feedback }: TestimonialCardProps) => {
   return (
-    <div className="bg-card p-6 rounded-xl shadow-card hover:shadow-hover transition-shadow duration-300">
-      <Quote className="w-10 h-10 text-primary mb-4" />
-      <p className="text-foreground mb-4 italic">"{feedback}"</p>
-      <div className="border-t border-border pt-4">
-        <p className="font-semibold text-foreground">{name}</p>
-        <p className="text-sm text-muted-foreground">{procedure}</p>
+    <div className="bg-card p-8 rounded-2xl shadow-card hover:shadow-hover transition-all duration-300 hover:-translate-y-1 border border-border/50 h-full flex flex-col">
+      <div className="w-12 h-12 bg-primary-light rounded-full flex items-center justify-center mb-5">
+        <Quote className="w-6 h-6 text-primary" />
+      </div>
+      <p className="text-foreground mb-6 italic leading-relaxed flex-grow">"{feedback}"</p>
+      <div className="border-t border-border pt-5">
+        <p className="font-bold text-lg text-foreground">{name}</p>
+        <p className="text-sm text-primary font-medium mt-1">{procedure}</p>
       </div>
     </div>
   );
