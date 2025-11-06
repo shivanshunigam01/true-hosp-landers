@@ -44,12 +44,12 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            {/* <Button variant="default" size="sm" className="ml-4" asChild>
+            <Button variant="default" size="sm" className="ml-4" asChild>
               <a href="tel:+919205007277">
                 <Phone className="w-4 h-4 mr-2" />
                 Call Now
               </a>
-            </Button> */}
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
