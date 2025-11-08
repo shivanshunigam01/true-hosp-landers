@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://api.truehospitals.com/leads";
+const API_URL = "https://api.truehospitals.com/api/leads";
 
 export const getLeads = async () => (await axios.get(API_URL)).data.leads;
 export const createLead = async (lead: any) =>
