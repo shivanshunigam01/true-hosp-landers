@@ -8,7 +8,11 @@ import TestimonialCard from "@/components/hospital/TestimonialCard";
 import WhatsAppButton from "@/components/hospital/WhatsAppButton";
 import { Award, Baby, Clock, Heart, Shield, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import gynecologistDoctors from "@/assets/gynecologist-doctors.jpg";
+
+import gynecologistHero from "../assets/gynecologist-doctors.jpg";
+import suman from "../assets/suman.jpg";
+import surbhi from "../assets/surbhi.jpg";
+import anam from "../assets/anam.png";
 
 const Gynecologist = () => {
   const concernOptions = [
@@ -17,7 +21,7 @@ const Gynecologist = () => {
     "Cesarean Delivery",
     "PCOD / PCOS Treatment",
     "Menstrual Disorders",
-    "Fibroid Treatment",
+    "Fibroid / Ovarian Cyst Surgery",
     "Fertility Consultation",
     "Other",
   ];
@@ -33,15 +37,15 @@ const Gynecologist = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="animate-fade-in">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-primary">
-                Expert Care, Every Step of the Way
+                Compassionate Women's Health & Maternity Care
               </h1>
               <p className="text-lg md:text-xl mb-8 text-primary/80">
-                Explore our array of services designed to meet your unique
-                health needs
+                From regular check-ups to high-risk pregnancy management, our
+                expert gynecologists provide trusted, personalized care.
               </p>
               <div className="relative rounded-2xl overflow-hidden">
                 <img
-                  src={gynecologistDoctors}
+                  src={gynecologistHero}
                   alt="Expert Gynecologists"
                   className="w-full h-auto"
                 />
@@ -51,6 +55,7 @@ const Gynecologist = () => {
               <AppointmentForm
                 options={concernOptions}
                 selectLabel="Select Your Concern"
+                category="Gynecologist"
               />
             </div>
           </div>
@@ -62,11 +67,11 @@ const Gynecologist = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Choose Us for Women's Care?
+              Why Choose T.R.U.E. Hospitals for Women’s Care?
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Dedicated to providing comprehensive and compassionate care for
-              women at every stage of life
+              Comprehensive maternity and gynecology services delivered with
+              compassion and expertise at every stage of a woman's life.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -78,7 +83,7 @@ const Gynecologist = () => {
             />
             <FeatureCard icon={Shield} title="Ultrasound & Fertility Support" />
             <FeatureCard icon={Clock} title="24×7 Emergency Care" />
-            <FeatureCard icon={Award} title="Personalized Women's Care" />
+            <FeatureCard icon={Award} title="Personalized Women’s Care" />
           </div>
         </div>
       </section>
@@ -88,43 +93,43 @@ const Gynecologist = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Gynecology Services
+              Our Gynecology & Maternity Services
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Complete range of women's health and maternity services under one
-              roof
+              Advanced women’s healthcare services designed for safety, comfort,
+              and long-term wellness.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard
               icon={Baby}
-              title="Pregnancy Care"
-              description="Complete antenatal and postnatal care with regular monitoring"
+              title="Pregnancy & Antenatal Care"
+              description="Comprehensive prenatal and postnatal support from our expert team."
             />
             <ServiceCard
               icon={Heart}
               title="Normal / Cesarean Delivery"
-              description="Safe delivery options with expert obstetric care"
+              description="Safe delivery options with advanced fetal monitoring systems."
             />
             <ServiceCard
               icon={Shield}
-              title="PCOD / PCOS Treatment"
-              description="Advanced treatment for hormonal and metabolic disorders"
+              title="PCOD / PCOS Management"
+              description="Personalized plans for hormonal balance and reproductive health."
             />
             <ServiceCard
               icon={Users}
-              title="Menstrual Disorder Management"
-              description="Expert care for irregular periods and related conditions"
+              title="Menstrual & Hormonal Disorders"
+              description="Accurate diagnosis and treatment for irregular or painful cycles."
             />
             <ServiceCard
               icon={Award}
-              title="Fibroid / Ovarian Cyst Surgery"
-              description="Minimally invasive surgical options available"
+              title="Fibroid & Cyst Surgery"
+              description="Minimally invasive laparoscopic and hysteroscopic procedures."
             />
             <ServiceCard
               icon={Clock}
               title="Fertility Consultation"
-              description="Comprehensive fertility evaluation and treatment plans"
+              description="Guided fertility assessment and advanced conception support."
             />
           </div>
         </div>
@@ -135,28 +140,34 @@ const Gynecologist = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Meet Our Gynecologists
+              Meet Our Leading Gynecologists
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Expert women's health specialists dedicated to your care and
-              comfort
+              Trusted women’s health specialists dedicated to your care and
+              comfort throughout every milestone.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <DoctorCard
-              name="Dr. Meera Kapoor"
-              specialization="Obstetrics & Gynecology"
-              experience="20+ years experience"
+              name="Dr. Suman Bishnoi"
+              specialization="Gynecologist, Obstetrician & Infertility Specialist"
+              experience="44 years experience (31 years as specialist)"
+              description="MBBS - Highly experienced women's health physician specializing in obstetrics, gynecology, and infertility treatments with comprehensive care for all female health concerns."
+              image={suman}
             />
             <DoctorCard
-              name="Dr. Anjali Gupta"
-              specialization="High-Risk Pregnancy & Fertility"
-              experience="15+ years experience"
+              name="Dr. Surbhi Gupta"
+              specialization="Reproductive Medicine & Infertility Specialist"
+              experience="16 years experience (12 years as specialist)"
+              description="MBBS, MS (Gold Medalist), FNB Reproductive Medicine - Expert in reproductive endocrinology, infertility, recurrent pregnancy loss, and advanced fertility treatments."
+              image={surbhi}
             />
             <DoctorCard
-              name="Dr. Kavita Reddy"
-              specialization="Gynecological Surgery & PCOS"
-              experience="14+ years experience"
+              name="Dr. Anam Ghani"
+              specialization="Obstetrician & Gynecologist"
+              experience="11 years experience (5 years as specialist)"
+              description="MBBS, MS Obstetrics & Gynaecology - Specialist in high-risk pregnancy, advanced ultrasound, PCOS treatment, and comprehensive women's healthcare with evidence-based compassionate care."
+              image={anam}
             />
           </div>
         </div>
@@ -170,25 +181,25 @@ const Gynecologist = () => {
               Patient Testimonials
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Real stories from mothers and women we've had the privilege to
-              care for
+              Real stories from mothers and women who trusted T.R.U.E. Hospitals
+              for their journey.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <TestimonialCard
               name="Pooja Sharma"
               procedure="Normal Delivery"
-              feedback="Dr. Meera and the team made my delivery experience so comfortable. The care I received was exceptional!"
+              feedback="Dr. Meera and her team made my delivery experience seamless and stress-free. Forever grateful!"
             />
             <TestimonialCard
               name="Neha Patel"
               procedure="PCOD Treatment"
-              feedback="After years of struggling with PCOD, Dr. Anjali's treatment plan finally worked. I'm grateful for her expertise."
+              feedback="After years of discomfort, Dr. Anjali’s holistic treatment helped me regain my health and confidence."
             />
             <TestimonialCard
               name="Ritu Malhotra"
               procedure="High-Risk Pregnancy"
-              feedback="The 24×7 support during my high-risk pregnancy gave me so much confidence. My baby and I are healthy thanks to T.R.U.E. Hospitals!"
+              feedback="The care during my high-risk pregnancy was exceptional. My baby and I are both healthy and happy!"
             />
           </div>
         </div>
@@ -202,8 +213,8 @@ const Gynecologist = () => {
               Visit Us Today
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Conveniently located in Sector 52, Gurugram with easy access and
-              parking
+              Conveniently located in Sector 52, Gurugram — with dedicated
+              parking and 24×7 support.
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -216,16 +227,16 @@ const Gynecologist = () => {
                   <p className="font-medium text-foreground mb-2">Address</p>
                   <p className="text-muted-foreground">
                     372, near Artemis Hospital Road, Wazirabad, Sector 52,
-                    Gurugram, Bindapur, Haryana 122003
+                    Gurugram, Haryana 122003
                   </p>
                 </div>
                 <div>
                   <p className="font-medium text-foreground mb-2">Phone</p>
                   <a
-                    href="tel:+919205007277"
+                    href="tel:9211731007"
                     className="text-primary hover:underline"
                   >
-                    +91-9205007277
+                    +91-9211731007
                   </a>
                 </div>
                 <div>
@@ -240,7 +251,7 @@ const Gynecologist = () => {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 mt-10">
                 <Button asChild className="flex-1">
-                  <a href="tel:+919205007277">Call Now</a>
+                  <a href="tel:9211731007">Call Now</a>
                 </Button>
                 <Button variant="outline" asChild className="flex-1">
                   <a

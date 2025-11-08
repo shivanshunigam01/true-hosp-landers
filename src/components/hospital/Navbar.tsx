@@ -45,7 +45,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Button variant="default" size="sm" className="ml-4" asChild>
-              <a href="tel:+919205007277">
+              <a href="tel:9211731007">
                 <Phone className="w-4 h-4 mr-2" />
                 Call Now
               </a>
@@ -84,9 +84,9 @@ const Navbar = () => {
               </Link>
             ))}
             <Button variant="default" size="sm" className="w-full" asChild>
-              <a href="tel:+919205007277">
+              <a href="tel:9211731007">
                 <Phone className="w-4 h-4 mr-2" />
-                Call +91-9205007277
+                Call +91-9211731007
               </a>
             </Button>
           </div>

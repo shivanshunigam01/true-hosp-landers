@@ -8,7 +8,10 @@ import TestimonialCard from "@/components/hospital/TestimonialCard";
 import WhatsAppButton from "@/components/hospital/WhatsAppButton";
 import { Award, Clock, Heart, Shield, Stethoscope, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import doctorsHero from "@/assets/doctors-hero.jpg";
+import avaneeshImg from "../assets/avaneeshImg.png";
+import dharmendraImg from "../assets/dharmendra.png";
+import gaurangaImg from "../assets/gauranga.png";
+import doctorsHero from "../assets/doctors-hero.jpg";
 
 const GeneralSurgeon = () => {
   const surgeryOptions = [
@@ -51,6 +54,7 @@ const GeneralSurgeon = () => {
               <AppointmentForm
                 options={surgeryOptions}
                 selectLabel="Select Surgery Type"
+                category="General Surgeon"
               />
             </div>
           </div>
@@ -130,33 +134,42 @@ const GeneralSurgeon = () => {
       </section>
 
       {/* Surgeons Section */}
-      {/* <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Meet Our Expert Surgeons</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Meet Our Expert Surgeons
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Highly qualified and experienced general surgeons committed to your well-being
+              Highly qualified and experienced general surgeons committed to
+              your well-being
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <DoctorCard
-              name="Dr. Rajesh Kumar"
-              specialization="General & Laparoscopic Surgery"
-              experience="15+ years experience"
+              name="Dr. Avaneesh Hasiza"
+              specialization="General & Laparoscopic Surgeon"
+              experience="23 years experience (15 years as specialist)"
+              description="MBBS - Expert in gall bladder stone, hernia, appendix, and advanced Stapler Piles Surgery (MIPH). Specialist in abdominal trauma and complex surgical cases."
+              image={avaneeshImg}
             />
             <DoctorCard
-              name="Dr. Priya Sharma"
-              specialization="General Surgery & Endoscopy"
-              experience="12+ years experience"
+              name="Dr. Dharmendra Pal Singh"
+              specialization="General Surgeon"
+              experience="20 years experience (19 years as specialist)"
+              description="MS - General Surgery, MBBS - Extensive experience in general surgical procedures with proven track record."
+              image={dharmendraImg}
             />
             <DoctorCard
-              name="Dr. Amit Verma"
-              specialization="Advanced Laparoscopic Surgery"
-              experience="18+ years experience"
+              name="Dr. Gauranga Saikia"
+              specialization="Laparoscopic & Bariatric Surgeon"
+              experience="19 years experience (12 years as specialist)"
+              description="MBBS, DNB - Specialist in Minimal Access Surgery, Scarless Laparoscopic Surgery, Advanced hernia repair, Laser Proctology, and Bariatric Surgery."
+              image={gaurangaImg}
             />
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Testimonials Section */}
       <section className="py-30 md:py-24 bg-secondary">
@@ -217,10 +230,10 @@ const GeneralSurgeon = () => {
                 <div>
                   <p className="font-medium text-foreground mb-2">Phone</p>
                   <a
-                    href="tel:+919205007277"
+                    href="tel:9211731007"
                     className="text-primary hover:underline"
                   >
-                    +91-9205007277
+                    +91-9211731007
                   </a>
                 </div>
                 <div>
@@ -235,11 +248,11 @@ const GeneralSurgeon = () => {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 mt-10">
                 <Button asChild className="flex-1">
-                  <a href="tel:+919205007277">Call Now</a>
+                  <a href="tel:9211731007">Call Now</a>
                 </Button>
                 <Button variant="outline" asChild className="flex-1">
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=T.R.U.E.+Hospitals+Sector+52+Gurugram"
+                    href="https://www.google.com/maps/search/?api=1&query=C3PC%2B4P+Gurugram+Haryana"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -250,13 +263,14 @@ const GeneralSurgeon = () => {
             </div>
             <div className="bg-muted rounded-2xl overflow-hidden h-[500px] shadow-card border border-border/50">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.2!2d77.0855!3d28.4595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI3JzM0LjIiTiA3N8KwMDUnMDcuOCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14023.589924470383!2d77.0618125!3d28.4353125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d582e38859%3A0x910797b74522043e!2sC3PC%2B4P%20Gurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1731096000000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
-                title="T.R.U.E. Hospitals Location"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="C3PC+4P Gurugram, Haryana Location"
               ></iframe>
             </div>
           </div>
