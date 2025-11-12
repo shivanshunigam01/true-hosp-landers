@@ -15,7 +15,7 @@ import { createLead } from "@/lib/api";
 interface AppointmentFormProps {
   options: string[];
   selectLabel: string;
-  category: "General Surgeon" | "Gynecologist"; // ✅ Explicit category prop
+  category: "General Surgeon" | "Gynecologist" | "orthopedic"; // ✅ Explicit category prop
 }
 
 const AppointmentForm = ({

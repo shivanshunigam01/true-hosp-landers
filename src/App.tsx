@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import GeneralSurgeon from "./pages/GeneralSurgeon";
 import Gynecologist from "./pages/Gynecologist";
 import NotFound from "./pages/NotFound";
+import Orthopedic from "./pages/Orthopedic";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/general-surgeon" element={<GeneralSurgeon />} />
           <Route path="/gynecologist" element={<Gynecologist />} />
+          <Route path="/orthopedic" element={<Orthopedic />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
