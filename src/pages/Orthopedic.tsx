@@ -18,8 +18,9 @@ import {
 import { Button } from "@/components/ui/button";
 import orthoHero from "../assets/orthoHero.png";
 import drNavneet from "../assets/Navneet.jpg";
-import drShivam from "../assets/Shivam.jpg";
 import drHimanshu from "../assets/Himanshu.jpg";
+import drGuruditta from "../assets/guru.png";
+
 const Orthopedic = () => {
   const surgeryOptions = [
     "Knee Replacement",
@@ -94,7 +95,10 @@ const Orthopedic = () => {
               title="Faster Recovery & Rehabilitation"
             />
             <FeatureCard icon={Shield} title="Affordable Treatment Packages" />
-            <FeatureCard icon={Award} title="NABH Certified Excellence" />
+            <FeatureCard
+              icon={Award}
+              title="Trusted by Thousands of Patients"
+            />
           </div>
         </div>
       </section>
@@ -168,11 +172,11 @@ const Orthopedic = () => {
             />
 
             <DoctorCard
-              name="Dr. Shivam Rampal"
-              specialization="Orthopedic Surgeon"
-              experience="4+ years of experience in Orthopaedics"
-              description="MBBS (Adesh Medical College, Bathinda), MS - Orthopaedics (Subharti Medical College) — Experienced in managing shoulder pain, frozen shoulder, tennis elbow, and neck disorders. Formerly served at Fortis Hospital and Subharti Medical College. Member, Delhi Medical Council."
-              image={drShivam}
+              name="Dr. Guruditta Khurana"
+              specialization="Orthopaedics (Joint Replacement and Robotics)"
+              experience="10+ years of experience in Orthopaedics"
+              description="MBBS, D. Ortho, FJRR — Fellowship in Joint Replacement & Robotics (Marengo Asia Hospitals, Gurgaon). Experienced in fracture, joint disorders, arthritis, hip/knee replacement and sports injuries. Member of IOA, IAS, ISKSAA, DOA and AAOS. Dr. Khurana emphasizes minimally invasive robotic surgery and patient-centred rehabilitation for faster recovery."
+              image={drGuruditta}
             />
 
             <DoctorCard
@@ -211,7 +215,7 @@ const Orthopedic = () => {
             <TestimonialCard
               name="Anil Kumar"
               procedure="Spine Surgery"
-              feedback="Dr. Sandeep and his team gave me a new life. I’m back to my active routine without back pain."
+              feedback="Dr. Navneet and his team gave me a new life. I’m back to my active routine without back pain."
             />
           </div>
         </div>
