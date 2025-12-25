@@ -9,13 +9,20 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useToast } from "@/hooks/use-toast";
 import { createLead } from "@/lib/api";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import { CheckCircle, AlertTriangle } from "lucide-react";
 
 interface AppointmentFormProps {
   options: string[];
   selectLabel: string;
-  category: "General Surgeon" | "Gynecologist" | "orthopedic"; // ✅ Explicit category prop
+  category: "General Surgeon" | "Gynecologist" | "orthopedic";
 }
 
 const AppointmentForm = ({
@@ -28,12 +35,24 @@ const AppointmentForm = ({
     phone: "",
     selectedOption: "",
   });
-  const { toast } = useToast();
+
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [dialogType, setDialogType] = useState<"success" | "error" | "invalid">(
+    "success"
+  );
+
+  const isValidPhone = (phone: string) => /^[0-9]{10}$/.test(phone);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // ✅ Create correct payload for your backend
+    // ❌ Invalid phone
+    if (!isValidPhone(formData.phone)) {
+      setDialogType("invalid");
+      setDialogOpen(true);
+      return;
+    }
+
     const payload = {
       name: formData.name,
       phone: formData.phone,
@@ -41,88 +60,130 @@ const AppointmentForm = ({
       surgeryType:
         category === "General Surgeon" ? formData.selectedOption : "",
       concern: category === "Gynecologist" ? formData.selectedOption : "",
-      date: new Date().toISOString().split("T")[0], // e.g. 2025-11-08
+      date: new Date().toISOString().split("T")[0],
       status: "New",
     };
 
     try {
       await createLead(payload);
-      toast({
-        title: "Appointment booked successfully!",
-        description: "Our team will contact you shortly.",
-      });
-      // ✅ Reset form
+
+      // ✅ Success
+      setDialogType("success");
+      setDialogOpen(true);
+
       setFormData({ name: "", phone: "", selectedOption: "" });
     } catch (err) {
       console.error(err);
-      toast({
-        title: "Something went wrong!",
-        description: "Please try again later.",
-        variant: "destructive",
-      });
+      setDialogType("error");
+      setDialogOpen(true);
     }
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="space-y-4 bg-card p-6 rounded-xl shadow-card"
-    >
-      {/* Full Name */}
-      <div>
-        <Label htmlFor="name">Full Name</Label>
-        <Input
-          id="name"
-          type="text"
-          placeholder="Enter your name"
-          value={formData.name}
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          required
-          className="mt-1"
-        />
-      </div>
+    <>
+      <form
+        onSubmit={handleSubmit}
+        className="space-y-4 bg-card p-6 rounded-xl shadow-card"
+      >
+        {/* Name */}
+        <div>
+          <Label htmlFor="name">Full Name</Label>
+          <Input
+            id="name"
+            placeholder="Enter your name"
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            required
+            className="mt-1"
+          />
+        </div>
 
-      {/* Phone Number */}
-      <div>
-        <Label htmlFor="phone">Phone Number</Label>
-        <Input
-          id="phone"
-          type="tel"
-          placeholder="+91 XXXXX XXXXX"
-          value={formData.phone}
-          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-          required
-          className="mt-1"
-        />
-      </div>
+        {/* Phone */}
+        <div>
+          <Label htmlFor="phone">Phone Number</Label>
+          <Input
+            id="phone"
+            placeholder="Enter 10-digit number"
+            value={formData.phone}
+            maxLength={10}
+            inputMode="numeric"
+            onChange={(e) => {
+              const value = e.target.value.replace(/\D/g, "");
+              setFormData({ ...formData, phone: value });
+            }}
+            required
+            className="mt-1"
+          />
+        </div>
 
-      {/* Concern / Surgery Type */}
-      <div>
-        <Label htmlFor="concern">{selectLabel}</Label>
-        <Select
-          value={formData.selectedOption}
-          onValueChange={(value) =>
-            setFormData({ ...formData, selectedOption: value })
-          }
-        >
-          <SelectTrigger className="mt-1">
-            <SelectValue placeholder="Select an option" />
-          </SelectTrigger>
-          <SelectContent className="bg-popover z-50">
-            {options.map((option) => (
-              <SelectItem key={option} value={option}>
-                {option}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
+        {/* Select */}
+        <div>
+          <Label>{selectLabel}</Label>
+          <Select
+            value={formData.selectedOption}
+            onValueChange={(value) =>
+              setFormData({ ...formData, selectedOption: value })
+            }
+          >
+            <SelectTrigger className="mt-1">
+              <SelectValue placeholder="Select an option" />
+            </SelectTrigger>
+            <SelectContent>
+              {options.map((option) => (
+                <SelectItem key={option} value={option}>
+                  {option}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
 
-      {/* Submit */}
-      <Button type="submit" className="w-full" size="lg">
-        Book Consultation
-      </Button>
-    </form>
+        <Button type="submit" className="w-full" size="lg">
+          Book Consultation
+        </Button>
+      </form>
+
+      {/* 🔔 DIALOG BOX */}
+      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+        <DialogContent className="max-w-sm text-center">
+          <DialogHeader>
+            {dialogType === "success" && (
+              <>
+                <div className="flex justify-center mb-4">
+                  <CheckCircle className="h-14 w-14 text-green-600" />
+                </div>
+                <DialogTitle>Lead Submitted Successfully!</DialogTitle>
+                <DialogDescription>
+                  Our team will contact you shortly.
+                </DialogDescription>
+              </>
+            )}
+
+            {dialogType === "invalid" && (
+              <>
+                <div className="flex justify-center mb-4">
+                  <AlertTriangle className="h-14 w-14 text-yellow-500" />
+                </div>
+                <DialogTitle>Invalid Phone Number</DialogTitle>
+                <DialogDescription>
+                  Please enter a valid 10-digit mobile number.
+                </DialogDescription>
+              </>
+            )}
+
+            {dialogType === "error" && (
+              <>
+                <div className="flex justify-center mb-4">
+                  <AlertTriangle className="h-14 w-14 text-red-500" />
+                </div>
+                <DialogTitle>Something went wrong</DialogTitle>
+                <DialogDescription>Please try again later.</DialogDescription>
+              </>
+            )}
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 };
 
